@@ -56,16 +56,6 @@ endif
   " These are files I am not likely to want to edit or read.
   set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.class
   
-"Use a temp directory in the home dir rather than in tmp where it can get
-"cleaned up without our consent
-
-"Disabled options
-  "set list                    " Make tabs and trails explicit
-  "set noswapfile              " this guy is really annoyoing sometimes
-  "set wrapmargin=80           " When pasteing, use this, because textwidth becomes 0
-                               " wrapmargin inserts breaks if you exceed its value
-  "set cscopeprg=~/bin/cscope  "set cscope bin path
-
 "Set colorscheme.  This is a black background colorscheme
   colorscheme desert
 
@@ -73,9 +63,6 @@ endif
   " read/write a .viminfo file, don't store more than
   " 50 lines of registers
   set viminfo='20,\"50    
-
-
-"Set variables for plugins to use
 
   "vimspell variables
     "don't automatically spell check!
@@ -99,13 +86,6 @@ endif
     map <silent> <Leader>to :TlistOpen<CR>
   endif
 
-  " LargeFile.vim settings
-  " don't run syntax and other expensive things on files larger than NUM megs
-  "let g:LargeFile = 100
-
-  "ag.vim settings
-  "let g:agprg = g:ApolloRoot . '/bin/ag --column'
-
 "Turn on filetype plugins to automagically
   "Grab commands for particular filetypes.
   "Grabbed from $VIM/ftplugin
@@ -114,28 +94,6 @@ endif
 
 "Turn on syntax highlighting
 syntax on
-
-"mappings
-  "normal mode maps
-    "Map \pe to editing the file in perforce
-    "nmap <Leader>pe :!PWD=`/apollo/env/envImprovement/bin/realdir %` p4 edit `basename %`<CR>
-
-    "Map \e to edit a file from the directory of the current buffer
-    "if has("unix")
-    "  nmap <Leader>e :e <C-R>=expand("%:p:h") . "/"<CR>
-    "else
-     " nmap <Leader>,e :e <C-R>=expand("%:p:h") . "\\"<CR>
-   " endif
-
-
-  "map commands
-    "re-map rcsvers funtions
-   " map <F5> <Leader>rlog  " Display log buffer selector
-    "map <F6> <Leader>older " diff with an older version of the file
-    "map <F7> <Leader>newer " diff with a newer version of the file
-    "firefox like tab switching
-    "map [6^ :tabnext<CR> " Switch to the next tab
-    "map [5^ :tabprev<CR> " Switch to the prev tab
 
 "Functions
 fu! CscopeAdd() " Add Cscope database named .cscope.out
