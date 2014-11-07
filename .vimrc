@@ -152,3 +152,11 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Makes cursor go down a single row on the screen (regardless of wrap around)
+nmap j gj 
+nmap k gk 
+
+" Allows me to cycle between open buffers
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
+nmap <C-e> :e #<CR>
