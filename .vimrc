@@ -3,7 +3,7 @@ if version >= 704
   let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf.py"
   let g:EclimCompletionMethod='omnifunc'
 endif
-
+  set encoding=utf-8
 " Configuration file for vim
   set number
 " Standard vim options
@@ -146,17 +146,31 @@ if exists("g:EnvImprovement_DeleteWsFiletypes") && !empty(g:EnvImprovement_Delet
     execute 'autocmd FileType ' . filetypeString  . ' autocmd BufWritePre <buffer> :call DeleteTrailingWhitespace()'
 endif
 
-set number
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
-set expandtab
+" My standard format settings
+  set number
+  set softtabstop=2
+  set tabstop=2
+  set shiftwidth=2
+  set expandtab
 
 " Makes cursor go down a single row on the screen (regardless of wrap around)
-nmap j gj 
-nmap k gk 
+  nmap j gj 
+  nmap k gk 
 
 " Allows me to cycle between open buffers
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
-nmap <C-e> :e #<CR>
+  nmap <C-n> :bnext<CR>
+  nmap <C-p> :bprev<CR>
+  nmap <C-e> :e #<CR>
+
+" toggles 
+  nmap \l :setlocal number!<CR> 
+  nmap \o :set paste!<CR>
+  nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
+
+"Support for heathen code formatting 
+  nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+  nmap \t :set expandtab tabstop=8 shiftwidth=8 softtabstop=4<CR>
+  nmap \M :set noexpantab tabstop=8 softtabstop=4 shiftwidth=4<CR>
+  nmap \m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
+
+" closetag.vim - automaticaly adds closing tag when </ typed

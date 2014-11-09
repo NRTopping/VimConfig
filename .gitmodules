@@ -1,0 +1,12 @@
+[submodule "bundle/delmitmate"]
+	path = bundle/delmitmate
+  url = git://github.com/Raimondi/delimitMate.git
+[submodule "bundle/YouCompleteMe"]
+  path = bundle/YouCompleteMe
+  url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/tern_for_vim"]
+  path = bundle/tern_for_vim
+  url = git://github.com/marijnh/tern_for_vim.git
+[submodule "./bundle/vim-powerline"]
+  path = bundle/vim-powerline
+  url = git://github.com/Lokaltog/vim-powerline.git
