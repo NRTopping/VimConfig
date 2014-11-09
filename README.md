@@ -38,6 +38,7 @@ browse tags of the current file, creates sidebar and displays ctags. I.e.
 displays function definitions for a C/C++ file. Need to install Exuberant ctags
 (brew install ctags-exuberant).
 
+
 Helpful Aliases 
 ===============
 alias vi="mvim -v"
