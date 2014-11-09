@@ -33,6 +33,11 @@ Provides ability to quickly comment and uncomment lines (<#>\ci)
 support in vim, see these <a
 href="http://vimcasts.org/blog/2011/05/the-fugitive-series/">screencasts</a> for tutorials.
 
+<a href="https://github.com/majutsushi/tagbar">Tagbar</a> - Provides easy way to
+browse tags of the current file, creates sidebar and displays ctags. I.e.
+displays function definitions for a C/C++ file. Need to install Exuberant ctags
+(brew install ctags-exuberant).
+
 Helpful Aliases 
 ===============
 alias vi="mvim -v"
