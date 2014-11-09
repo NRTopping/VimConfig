@@ -68,24 +68,6 @@ endif
     "don't automatically spell check!
     let spell_auto_type=""    
 
-  "taglist.vim settings
-  if exists("g:useNinjaTagList") && g:useNinjaTagList == 1
-    set updatetime=1000 "interval to update list window
-
-    let Tlist_Auto_Open=1 "Auto open the list window
-    let Tlist_Compact_Format=1 
-    let Tlist_Ctags_Cmd = g:ApolloRoot . '/bin/ctags' "Ctags binary to use
-    let Tlist_Enable_Fold_Column=0 "Turn off the fold column for list window
-    let Tlist_Exit_OnlyWindow=1 "Exit if list is only window
-    let Tlist_File_Fold_Auto_Close=1
-    let Tlist_Show_Menu=1 "Show tag menu in gvim
-    let Tlist_Use_Right_Window = 1 "put list window on the rigth
-
-    "maps to close, and open list window
-    map <silent> <Leader>tc :TlistClose<CR>
-    map <silent> <Leader>to :TlistOpen<CR>
-  endif
-
 "Turn on filetype plugins to automagically
   "Grab commands for particular filetypes.
   "Grabbed from $VIM/ftplugin
@@ -167,4 +149,5 @@ endif
   nmap \o :set paste!<CR>
   nmap \w :setlocal wrap!<CR>:setlocal wrap?<CR>
 
-" closetag.vim - automaticaly adds closing tag when </ typed
+" Tagbar, map toggle 
+  nmap \t :TagbarToggle<CR>
