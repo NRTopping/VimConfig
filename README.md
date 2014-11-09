@@ -1,7 +1,10 @@
-VimConfig
-=========
+VimConfig (Mac OSX)
+===================
 
-Vim Configuration Files and plugins for vim/macvim. 
+Vim Configuration Files and plugins for vim/macvim. You will need to install <a
+href="https://github.com/b4winckler/macvim">macvim</a> in order to make the most
+of these pluggins. I suggest installing it with <a
+href="http://brew.sh/">Homebrew</a> in order to streamline the process.
 
 Current Plugins 
 ===============
@@ -19,6 +22,16 @@ insert mode auto-completion for quotes, parens, brackets, etc.
 
 <a href="https://github.com/marijnh/tern_for_vim">Tern For Vim</a> - Provides
 tern based JavaScript Editing support
+
+<a href="https://github.com/vim-scripts/closetag.vim">CloseTag</a> - Provides
+autocompletion for html closing tags after typing &lt;/
+
+<a href="https://github.com/scrooloose/nerdcommenter">NerdCommenter</a> -
+Provides ability to quickly comment and uncomment lines (<#>\ci)
+
+<a href="https://github.com/tpope/vim-fugitive">Fugitive</a> - Awesome git
+support in vim, see these <a
+href="http://vimcasts.org/blog/2011/05/the-fugitive-series/">screencasts</a> for tutorials.
 
 Helpful Aliases 
 ===============
