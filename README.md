@@ -6,6 +6,11 @@ href="https://github.com/b4winckler/macvim">macvim</a> in order to make the most
 of these pluggins. I suggest installing it with <a
 href="http://brew.sh/">Homebrew</a> in order to streamline the process.
 
+To Use
+======
+You will need to clone this git repository to your ~/.vim directory. Once you
+have done that, create a link between ~/.vim/.vimrc and ~/.vimrc. 
+
 Current Plugins 
 ===============
 <a href="https://github.com/tpope/vim-pathogen">Pathogen</a> - Plugin manager
