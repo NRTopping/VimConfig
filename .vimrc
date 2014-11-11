@@ -1,6 +1,7 @@
 if version >= 704
   execute pathogen#infect()
-  let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf_c.py"
+  let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf_cpp.py"
+  autocmd FileType c let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf_c.py"       
   let g:EclimCompletionMethod='omnifunc'
 endif
   set encoding=utf-8
