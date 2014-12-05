@@ -14,8 +14,8 @@ endif
   set diffopt=filler,iwhite " keep files synced and ignore whitespace
   set expandtab             " Get rid of tabs altogether and replace with spaces
   set foldcolumn=2          " set a column incase we need it
-  set foldlevel=0           " show contents of all folds
-  set foldmethod=indent     " use indent unless overridden
+  set foldlevel=10          " show contents of all folds
+  set foldmethod=syntax     " use indent unless overridden
   set guioptions-=m         " Remove menu from the gui
   set guioptions-=T         " Remove toolbar
   set hidden                " hide buffers instead of closing
