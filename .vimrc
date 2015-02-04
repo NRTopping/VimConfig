@@ -13,7 +13,7 @@ endif
   set cindent               " c code indenting
   set diffopt=filler,iwhite " keep files synced and ignore whitespace
   set expandtab             " Get rid of tabs altogether and replace with spaces
-  set foldcolumn=2          " set a column incase we need it
+  set foldcolumn=0          " set a column incase we need it
   set foldlevel=10          " show contents of all folds
   set foldmethod=syntax     " use indent unless overridden
   set guioptions-=m         " Remove menu from the gui
@@ -37,8 +37,10 @@ endif
   set showcmd               " Show (partial) command in status line.
   set showmatch             " Show matching brackets.
   set softtabstop=4         " Why are tabs so big?  This fixes it
-  set textwidth=0           " Don't wrap words by default
+  "set textwidth=0           " Don't wrap words by default
   set textwidth=80          " This wraps a line with a break when you reach 80 chars
+  set wrapmargin=2
+  set wrap
   set virtualedit=block     " let blocks be in virutal edit mode
   set wildmenu              " This is used with wildmode(full) to cycle options
 
@@ -152,3 +154,8 @@ endif
 
 " Tagbar, map toggle 
   nmap \t :TagbarToggle<CR>
+
+  augroup vimrc_autocmds
+    autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+    autocmd BufEnter * match OverLength /\%81v.*/
+  augroup END
