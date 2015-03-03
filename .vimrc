@@ -155,7 +155,3 @@ endif
 " Tagbar, map toggle 
   nmap \t :TagbarToggle<CR>
 
-  augroup vimrc_autocmds
-    autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-    autocmd BufEnter * match OverLength /\%81v.*/
-  augroup END
