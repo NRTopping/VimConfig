@@ -60,7 +60,13 @@ endif
   set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.class
   
 "Set colorscheme.  This is a black background colorscheme
-  colorscheme desert
+  "colorscheme desert
+  let g:solarized_termcolors=256
+  let g:solarized_contrast="high"
+  let g:solarized_visibility="high"
+  let g:solarized_termtrans=1
+  set background=dark
+  colorscheme solarized
 
 " viminfo options
   " read/write a .viminfo file, don't store more than
@@ -79,6 +85,7 @@ endif
 
 "Turn on syntax highlighting
 syntax on
+syntax enable
 
 "Functions
 fu! CscopeAdd() " Add Cscope database named .cscope.out
@@ -155,3 +162,5 @@ endif
 " Tagbar, map toggle 
   nmap \t :TagbarToggle<CR>
 
+" Toggle solarized background color
+  call togglebg#map("<F5>")
