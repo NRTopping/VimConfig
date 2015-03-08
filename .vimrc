@@ -43,6 +43,7 @@ endif
   set wrap
   set virtualedit=block     " let blocks be in virutal edit mode
   set wildmenu              " This is used with wildmode(full) to cycle options
+  set t_Co=256
 
 "Longer Set options
   set cscopequickfix=s-,c-,d-,i-,t-,e-,g-,f-   " useful for cscope in quickfix
@@ -64,7 +65,9 @@ endif
   let g:solarized_termcolors=256
   let g:solarized_contrast="high"
   let g:solarized_visibility="high"
-  let g:solarized_termtrans=1
+  if !has('gui_running')
+    let g:solarized_termtrans=1
+  endif
   set background=dark
   colorscheme solarized
 
@@ -163,4 +166,10 @@ endif
   nmap \t :TagbarToggle<CR>
 
 " Toggle solarized background color
-  call togglebg#map("<F5>")
+  so ~/.vim/bundle/vim-colors-solarized/autoload/togglebg.vim 
+
+" Window navigation
+  nmap <silent> <A-Up> :wincmd k<CR>
+  nmap <silent> <A-Down> :wincmd j<CR>
+  nmap <silent> <A-Left> :wincmd h<CR>
+  nmap <silent> <A-Right> :wincmd l<CR>
