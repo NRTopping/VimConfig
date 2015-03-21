@@ -61,7 +61,7 @@ endif
   set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc,.class
   
 "Set colorscheme.  This is a black background colorscheme
-  "colorscheme desert
+if version >= 704
   let g:solarized_termcolors=256
   let g:solarized_contrast="high"
   let g:solarized_visibility="high"
@@ -70,6 +70,9 @@ endif
   endif
   set background=dark
   colorscheme solarized
+else
+  colorscheme desert
+endif
 
 " viminfo options
   " read/write a .viminfo file, don't store more than
