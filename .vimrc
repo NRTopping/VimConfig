@@ -1,8 +1,25 @@
 if version >= 704
-  execute pathogen#infect()
+  filetype off
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
+
+  Plugin 'gmarik/Vundle.vim'
+  Plugin 'Valloric/YouCompleteMe'
+  Plugin 'Lokaltog/vim-powerline'
+  Plugin 'Raimondi/delimitMate'
+  Plugin 'marijnh/tern_for_vim'
+  Plugin 'vim-scripts/closetag.vim'
+  Plugin 'scrooloose/nerdcommenter'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'majutsushi/tagbar'
+  Plugin 'altercation/vim-colors-solarized'
+  Plugin 'scrooloose/nerdtree'
+
   let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf_cpp.py"
   autocmd FileType c let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf_c.py"       
   let g:EclimCompletionMethod='omnifunc'
+  call vundle#end()
+  filetype plugin on
 endif
   set encoding=utf-8
 " Configuration file for vim
