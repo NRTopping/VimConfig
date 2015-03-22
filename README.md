@@ -43,6 +43,10 @@ browse tags of the current file, creates sidebar and displays ctags. I.e.
 displays function definitions for a C/C++ file. Need to install Exuberant ctags
 (brew install ctags-exuberant).
 
+<a href="https://github.com/altercation/vim-colors-solarized">Solarized</a> - Dem colors
+
+<a href="https://github.com/scrooloose/nerdtree">NerdTree</a> - provides easy access to folders
+
 
 Helpful Aliases 
 ===============
