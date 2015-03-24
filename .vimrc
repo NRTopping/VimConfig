@@ -5,7 +5,8 @@ if version >= 704
 
   Plugin 'gmarik/Vundle.vim'
   Plugin 'Valloric/YouCompleteMe'
-  Plugin 'Lokaltog/vim-powerline'
+  Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+  Plugin 'powerline/fonts'
   Plugin 'Raimondi/delimitMate'
   Plugin 'marijnh/tern_for_vim'
   Plugin 'vim-scripts/closetag.vim'
