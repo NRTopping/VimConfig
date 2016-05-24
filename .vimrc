@@ -15,6 +15,7 @@ if version >= 704
   Plugin 'majutsushi/tagbar'
   Plugin 'altercation/vim-colors-solarized'
   Plugin 'scrooloose/nerdtree'
+  Plugin 'jeffkreeftmeijer/vim-numbertoggle',
 
   let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf_cpp.py"
   autocmd FileType c let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf_c.py"       
@@ -55,8 +56,8 @@ endif
   set showcmd               " Show (partial) command in status line.
   set showmatch             " Show matching brackets.
   set softtabstop=4         " Why are tabs so big?  This fixes it
-  "set textwidth=0           " Don't wrap words by default
-  set textwidth=80          " This wraps a line with a break when you reach 80 chars
+  set textwidth=100         " This wraps a line with a break when you reach 80 chars
+  set colorcolumn=101
   set wrapmargin=2
   set wrap
   set virtualedit=block     " let blocks be in virutal edit mode
@@ -193,3 +194,9 @@ endif
 
 " Nerd Tree toggle 
   nmap \d :NERDTreeToggle<CR>
+
+" iterm2  mouse scrolling
+  if has ('mouse_sgr')
+    set ttymouse=sgr
+  endif
+  :set mouse=nicr
